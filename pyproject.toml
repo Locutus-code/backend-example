@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "qvik-exercise"
+version = "0.0.1"
+description = "Qvik backend exercise"
+authors = ["Denny <Denny@Puscii.nl>"]
+license = "Proprietary"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+chalice = "^1.24.0"
+aws_lambda_powertools = "^1.18.1"
+faker = "^8.10.2"
+pydantic = {extras = ["email"], version = "^1.8.2"}
+
+[tool.poetry.dev-dependencies]
+faker = "^8.10.2"
+pytest = "^6.2.4"
+requests = "^2.26.0"
+pytest-base-url = "^1.4.2"
+pylint = "^2.9.6"
+flake8 = "^3.9.2"
+black = "^21.7b0"
+pylint-pytest = "^1.1.2"
+ipython = "^7.26.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

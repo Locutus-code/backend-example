@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.chalice/deployments/
+.chalice/venv/
+# Emacs
+
+*~
+*#*
+flycheck_*
+
+pdf-documents
