@@ -131,8 +131,13 @@ dmypy.json
 .chalice/venv/
 # Emacs
 
+.projectile
 *~
 *#*
 flycheck_*
 
 pdf-documents
+
+# allure test results
+
+test-results/

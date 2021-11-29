@@ -1,0 +1,24 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+    "Effect": "Allow",
+    "Action": [
+      "logs:CreateLogGroup",
+      "logs:CreateLogStream",
+      "logs:PutLogEvents"
+    ],
+    "Resource": "arn:*:logs:*:*:*"
+  },
+    {
+    "Action": "dynamodb:*",
+    "Effect": "Allow",
+    "Resource": "arn:aws:dynamodb:eu-west-1:020193958197:table/Channels"
+  },
+    {
+    "Action": "sqs:*",
+    "Effect": "Allow",
+    "Resource": "arn:aws:sqs:eu-west-1"
+  }
+  ]
+}

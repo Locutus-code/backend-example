@@ -1,0 +1,23 @@
+sequenceDiagram
+    loop: Create Channels
+        Client->>REST API: POST<br>/channel<br>{channel: CNN}
+        REST API->>DynamoDB: Create<br>ChannelModel
+        REST API->>Client: Response<br>{channel: CNN}
+    end
+    loop: Create articles
+        Client ->>REST API: POST<br>/articles/CNN<br>{'url': 'https://...'}
+        REST API->>SQS: Send msg<br>{id: UUID, status: IN_PROGRESS}
+        REST API->>Client: Response<br>{'id': UUID, <br>'status': 'in progress'}
+        loop: Client polls for article while in progress
+            Client->>REST API: GET<br>/articles/{article.id}
+            REST API->>Client: Response<br>{'status': 'in progress'}
+        end
+        SQS -)Worker: Trigger event<br>read msg
+        DynamoDB ->>Worker: Read ArticleModel<br> article.id
+        Worker ->>Website: Scraper operations
+        Worker ->>DynamoDB: Update ArticleModel<br>article.article_text<br>article.status == AVAILABLE
+        loop: Client polls for article after completion
+            Client->>REST API: GET<br>/articles/{article.id}
+            REST API->>Client: Response<br>{'status': 'available',<br> 'article_text': ....}
+        end
+    end
