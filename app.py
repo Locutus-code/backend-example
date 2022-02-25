@@ -1,4 +1,4 @@
-"""Qvik exercise app."""
+"""Chalice template example app.."""
 
 import os
 import sys
@@ -17,7 +17,7 @@ from chalicelib.blueprints.api_docs import api_docs
 from chalicelib.workers.articlescraper import scraper_worker
 
 QUEUE_URL: str = os.environ.get("SCRAPER_QUEUE_URL")
-app = Chalice(app_name="qvik-exercise-backend")
+app = Chalice(app_name="chalice-example-backend")
 if "local" in sys.argv:
     app.debug = True
 app.api.cors = True
