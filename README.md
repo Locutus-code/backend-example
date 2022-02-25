@@ -1,7 +1,7 @@
-# Qvik recruitment exercise solution
+# Backend example
 
 ## Requirements.
-This implements the functional requirements for the Qvik backend developer exercise.
+This implements the following functional requirements.
 
 - [x] Able to manage channels.
 - [x] Able to manage articles for a channel.
