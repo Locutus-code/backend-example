@@ -1,0 +1,15 @@
+
+{
+  "version": "2.0",
+  "app_name": "chalice-example-backend",
+  "environment_variables": {
+    "SCRAPER_QUEUE_URL": "scraper-queue-test"
+  },
+  "stages": {
+    "test": {
+
+      "api_gateway_stage": "api",
+      "autogen_policy": true
+    }
+  }
+}

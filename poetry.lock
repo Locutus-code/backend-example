@@ -915,7 +915,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "85f4d35210dfbe2bcfd850ef3c1808a89242155027c50cb732e476618a880e73"
+content-hash = "aa7ef42d29d58fed8148ca47040469ae56f4cac9564d016c49062534fe7a628a"
 
 [metadata.files]
 allure-pytest = [
