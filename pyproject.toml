@@ -29,7 +29,7 @@ pylint = "^2.9.6"
 flake8 = "^3.9.2"
 black = "^21.7b0"
 pylint-pytest = "^1.1.2"
-ipython = "^7.31.1"
+ipython = "^8.10"
 allure-pytest = "^2.9.45"
 
 [build-system]
